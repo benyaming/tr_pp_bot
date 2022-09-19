@@ -1,7 +1,7 @@
 from aiogram.types import Message
 from aiogram_metrics import track
 
-from bot.misc import dp
+from tr_pp_bot.misc import dp
 
 
 @dp.message_handler(commands=['start'])

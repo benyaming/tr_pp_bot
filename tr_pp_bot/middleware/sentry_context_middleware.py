@@ -3,8 +3,8 @@ from aiogram.dispatcher.middlewares import BaseMiddleware
 from aiogram.types import Update
 from sentry_sdk.integrations.aiohttp import AioHttpIntegration
 
-from bot.misc import dp
-from bot.config import SENTRY_PUBLIC_KEY
+from tr_pp_bot.misc import dp
+from tr_pp_bot.config import SENTRY_PUBLIC_KEY
 
 
 class SentryContextMiddleware(BaseMiddleware):

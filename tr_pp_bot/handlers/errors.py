@@ -2,8 +2,8 @@ import sentry_sdk
 from aiogram.types import User
 from aiogram_metrics import track
 
-from bot.misc import dp, bot, logger
-from bot.config import SENTRY_PUBLIC_KEY
+from tr_pp_bot.misc import dp, bot, logger
+from tr_pp_bot.config import SENTRY_PUBLIC_KEY
 
 
 @dp.errors_handler(exception=Exception)
