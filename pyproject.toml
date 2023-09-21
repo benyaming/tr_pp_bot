@@ -1,25 +1,3 @@
-#[tool.poetry]
-#name = "tr-pp-bot"
-#version = "0.1.0"
-#description = ""
-#authors = ["Benyamin Ginzburg <benyomin.94@gmail.com>"]
-#readme = "README.md"
-#packages = [{include = "tr_pp_bot"}]
-#
-#[tool.poetry.dependencies]
-#python = "^3.10"
-#
-#aiogram = {extras = [], version = "3.0.0b6"}
-#aiogram-metrics = "*"
-#betterlogging = "*"
-#pydantic = {extras = ["dotenv"], version = '*'}
-
-
-
-#[build-system]
-#requires = ["poetry-core"]
-#build-backend = "poetry.core.masonry.api"
-
 [project]
 name = "tr-pp-bot"
 version = "0.1.0"
@@ -35,11 +13,7 @@ dependencies = [
     "pydantic-settings",
     "setuptools",
 ]
+
 requires-python = ">=3.11,<4.0"
 license = {text = "-"}
 readme = "README.md"
-
-[tool.pdm.build]
-includes = [
-    "tr_pp_bot",
-]
