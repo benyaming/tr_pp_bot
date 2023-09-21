@@ -1,4 +1,4 @@
-name: {{PROJECT_NAME}} CI
+name: tr_pp_bot CI
 
 on:
   push:
@@ -16,9 +16,9 @@ jobs:
         run: docker build -t {{PROJECT_TAG}} -f Dockerfile .
       - name: Tags
         run: |
-          docker tag {{PROJECT_TAG}} ${{ secrets.DOCKER_USER }}/{{PROJECT_TAG}}:${{ github.sha }}
-          docker tag {{PROJECT_TAG}} ${{ secrets.DOCKER_USER }}/{{PROJECT_TAG}}:beta
+          docker tag tr_pp_bot ${{ secrets.DOCKER_USER }}/tr_pp_bot:${{ github.sha }}
+          docker tag tr_pp_bot ${{ secrets.DOCKER_USER }}/tr_pp_bot:beta
       - name: Push
         run: |
-          docker push ${{ secrets.DOCKER_USER }}/{{PROJECT_TAG}}:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USER }}/{{PROJECT_TAG}}:latest
+          docker push ${{ secrets.DOCKER_USER }}/tr_pp_bot:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USER }}/tr_pp_bot:latest
