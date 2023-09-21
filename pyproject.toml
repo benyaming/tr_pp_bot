@@ -11,9 +11,11 @@ dependencies = [
     "betterlogging",
     "pydantic",
     "pydantic-settings",
-    "setuptools",
 ]
 
 requires-python = ">=3.11,<4.0"
 license = {text = "-"}
 readme = "README.md"
+
+[tool.setuptools]
+py-modules = []

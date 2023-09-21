@@ -3,7 +3,7 @@ FROM python:3.11-slim
 RUN pip install pdm
 WORKDIR /home/app
 COPY . .
-WORKDIR /home/app/bot
+WORKDIR /home/app/tr_pp_bot
 RUN pdm install
 ENV PYTHONPATH=/home/app
 ENV DOCKER_MODE=true
