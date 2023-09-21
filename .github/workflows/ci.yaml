@@ -17,7 +17,7 @@ jobs:
       - name: Tags
         run: |
           docker tag tr_pp_bot ${{ secrets.DOCKER_USER }}/tr_pp_bot:${{ github.sha }}
-          docker tag tr_pp_bot ${{ secrets.DOCKER_USER }}/tr_pp_bot:beta
+          docker tag tr_pp_bot ${{ secrets.DOCKER_USER }}/tr_pp_bot:latest
       - name: Push
         run: |
           docker push ${{ secrets.DOCKER_USER }}/tr_pp_bot:${{ github.sha }}
