@@ -1,11 +1,11 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
-RUN pip install pipenv
+RUN pip install pdm
 WORKDIR /home/app
 COPY . .
 WORKDIR /home/app/bot
-RUN poetry update
+RUN pdm install
 ENV PYTHONPATH=/home/app
 ENV DOCKER_MODE=true
 EXPOSE 8000
-CMD ["poetry", "run", "python", "main.py"]
+CMD ["pdm", "run", "python", "main.py"]
